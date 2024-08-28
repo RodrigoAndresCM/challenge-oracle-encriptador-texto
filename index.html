@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <img class="presentacion_logo" src="./assets/Logo_Latan.png" alt="Logo de Alura Latan">
+    <main class="presentacion">        
+        <section class="presentacion_contenido">
+            <div class="presentacion_contenido_ini">
+                <input class="mensage_ingreso" type="text" id="texto_ingreso" placeholder="Ingrese el texto aqui" />
+                <div class="presentacion_botones_texto">
+                    <div class="presentacion_icono_mensaje">
+                        <img class="presentacion_icono" src="./assets/Icono_Mensaje.png" alt="Icono del mensaje">
+                        <h1 class="presentacion_mensaje">Solo letras minúsculas y sin acentos</h1>
+                    </div>
+                    <div class="presentacion_botones">
+                        <button onclick="encriptar();" class="container_boton" id="boton_encriptar">Encriptar</button>
+                        <button onclick="desencriptar();" class="container_boton" id="boton_desencriptar" disabled>Desencriptar</button>                    
+                    </div>                    
+                </div> 
+            </div>
+            <div class="presentacion_contenido_fin">
+                <div class="presentacion_texto_salida">
+                    <input class="mensage_salida" type="text" id="texto_salida" />
+                </div>
+                <div class="presentacion_imagen_no_existe">                    
+                    <img hidden id="imagen_no_existe" src="./assets/No_Encontrado.png" alt="Imagen de texto no encontrado">
+                    <h2 hidden id="mensaje_no_existe_ini">Ningún mensaje fue encontrado</h2>
+                    <p hidden id="mensaje_no_existe_fin">Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+                <div class="presentacion_botone_copiar">
+                    <button onclick="copiar();" class="container_boton_copiar">Copiar</button>
+                </div>
+            </div>
+        </section>        
+    </main>    
+    <script src="app.js" defer></script>
+</body>
+</html>

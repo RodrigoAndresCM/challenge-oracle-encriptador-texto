@@ -1,0 +1,165 @@
+:root {
+    --color-fondo-pagina: #F6F6F6;
+    --color-botones: #0A3871;
+    --color-botones-disabled: #898989;
+    --color-boton-copiar: #F6F6F6;
+    --color-boton-texto: #F6F6F6;
+    --color-borde: #000000;
+    --fuente-montserrat: "Montserrat", sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--color-fondo-pagina);
+    box-sizing: border-box;
+}
+
+.presentacion_logo{
+    padding: 40px 0px 0px 40px;
+}
+
+.presentacion{
+    display: flex;
+    align-items: center;
+    padding: 5% 12%;
+}
+
+.presentacion_contenido{
+    width: 50%; 
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.presentacion_mensaje{
+    font-size: 8px;
+}
+
+.presentacion_icono_mensaje{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.presentacion_botones{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+}
+
+.presentacion_contenido_ini{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.presentacion_botones_texto{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.presentacion_contenido_fin{
+    border-radius: 8px;
+    width: 400px;
+    height: 740px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--color-borde);
+}
+
+.mensage_ingreso{
+    width: 650px;
+    height: 288px;
+    border-radius: 8px;
+    border: 0px solid;
+    background-color: var(--color-fondo-pagina);
+    font-family: var(--fuente-montserrat);
+    font-size: 32px;
+}
+
+.mensage_salida{
+    width: 336px;
+    height: 350px;
+    border-radius: 8px;
+    border: 0px solid;
+    background-color: var(--color-fondo-pagina);
+    font-family: var(--fuente-montserrat);
+    font-size: 24px;
+}
+
+.presentacion_imagen_no_existe{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+}
+
+.container_boton{
+    border-radius: 8px;
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    font-size: 19px;
+    background-color: var(--color-botones);
+    color: var(--color-boton-texto);
+    gap: 10px;
+}
+
+.container_boton:disabled {
+    background-color: var(--color-botones-disabled);
+}
+
+.container_boton_copiar{
+    border-radius: 8px;
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    font-size: 19px;
+    background-color: var(--color-boton-copiar);
+    color: var(--color-botones);
+}
+
+@media (max-width: 1200px) {
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .presentacion_contenido{
+        flex-direction: column;
+        width: auto;
+    }
+    .presentacion_contenido_fin{
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+    .presentacion_botones_texto{
+        flex-direction: column;
+    }
+    .presentacion_botones{
+        flex-direction: column;
+    }
+    .mensage_ingreso{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 5px;
+    }    
+    .mensage_salida{
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+    }
+}
